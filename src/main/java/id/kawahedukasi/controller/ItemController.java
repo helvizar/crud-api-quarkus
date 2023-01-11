@@ -5,6 +5,7 @@ import id.kawahedukasi.model.Item;
 import javax.json.JsonObject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.HashMap;
 import java.util.List;
@@ -12,6 +13,8 @@ import java.util.Locale;
 import java.util.Map;
 
 @Path("/item")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class ItemController{
 
     @POST
